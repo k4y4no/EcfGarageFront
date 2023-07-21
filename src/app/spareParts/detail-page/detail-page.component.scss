@@ -1,0 +1,14 @@
+h2{
+    font-size: 3em;
+    text-align: center;
+}
+section{
+    display: flex;
+}
+.pictures{
+    flex: 0 0 50%;
+}
+
+.description{
+    flex: 0 0 50%;
+}

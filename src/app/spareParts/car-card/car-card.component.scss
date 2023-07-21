@@ -1,0 +1,45 @@
+
+:host{
+    flex-basis: 40%;
+
+}
+.activities{
+    border: 3px solid green;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 0.8em;
+    height: 30vh;
+    margin-bottom: 4vh;
+    margin-top: 4vh;
+
+    img{
+        height: 15vh;
+        position: relative;
+        top: -8vh;
+        object-fit: contain;
+
+    }
+  }
+
+.cars{
+    display: flex;
+    margin-bottom: 10px;
+
+
+
+    img{
+
+        object-fit: cover;
+        width: 40%;
+    }
+
+    
+    section{
+        background-color: rgb(232,244,235);
+        flex-basis: 60%;
+    }
+}
+
+
+
+
