@@ -1,0 +1,24 @@
+section{
+    display: none;
+}
+
+@media screen and (min-width: 800px) {
+    section{
+        display: flex;
+        background-color: rgb(7,108,60);
+        color: white;
+        height: 30vh;
+    
+        
+        img{
+            object-fit: cover;
+            flex: 0 0 40%;
+        }
+        div{
+            flex: 0 0 55%;
+            padding: 4%;
+        }
+    }
+  
+  
+  }
