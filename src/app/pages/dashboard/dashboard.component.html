@@ -1,1 +1,22 @@
-<p>dashboard works!</p>
+<div class="grid-container">
+    <nav class="sidebar">
+      <ul>
+        <li><a (click)="getThisPanel('users')">Users</a></li>
+        <li><a (click)="getThisPanel('cars')">Cars</a></li>
+        <li><a (click)="getThisPanel('comments')">Comments</a></li>      </ul>
+    </nav>
+<ng-container *ngIf="(panelRequested$ | async) as panelRequested">
+  <app-list-items [panelRequested]="panelRequested"></app-list-items>
+</ng-container>
+</div>
+<ng-container *ngIf="(panelRequested$ | async) as panelRequested">
+
+  <ng-container [ngSwitch]="panelRequested">
+
+    <app-form *ngSwitchCase="'users'" [formTemplate]="'users'"></app-form>
+    
+    <app-form *ngSwitchCase="'cars'" [formTemplate]="'cars'"></app-form>
+
+  </ng-container> 
+
+</ng-container>
