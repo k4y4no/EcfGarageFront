@@ -1,0 +1,19 @@
+<div *ngIf="(car$ | async) as car">
+    <h2>{{car.brand}} {{car.model}}</h2>
+    <section>
+        <div [ngClass]="'pictures'">
+            <img src="{{car.picture}}" alt="{{car.brand}}">
+        </div>
+    
+        <div [ngClass]="'description'">
+            <p >{{car.km}}</p>
+            <p>{{car.price}}</p>
+    
+            <app-form
+            [randomData]="car.brand"
+            [formTemplate]="'contact'"
+            ></app-form>
+        </div>
+    </section>
+
+</div>
