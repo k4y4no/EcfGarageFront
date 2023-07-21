@@ -1,0 +1,22 @@
+<ng-container *ngIf="car" >
+    <div (click)="goToCar(car)" [ngClass]="'cars'">
+
+        <img src="{{car.picture}}" alt="photos de {{car.brand}} {{car.model}}">
+        <section>
+            <h2>{{car.brand}} {{car.model}}</h2>
+            <p>{{car.km}}KM / {{car.price}}$</p>
+        </section>
+
+    </div> 
+</ng-container>
+
+<ng-container *ngIf="activity">
+    <div [ngClass]="'activities'">
+        <img src="{{activity.logo}}" alt="logo de {{activity.name}}">
+
+            <h2>{{activity.name}}</h2>
+            <p>{{activity.description}}</p>
+
+
+    </div> 
+</ng-container>
