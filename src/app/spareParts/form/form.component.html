@@ -1,0 +1,21 @@
+
+<form [formGroup]="contactForm" (submit)="onSubmit()">
+    <h2 *ngIf="url === '/contact'">Contactez nous!</h2>
+    <ng-container *ngFor="let field of fieldForm">
+        <div *ngIf="field.name !== 'message'">
+            <label for="{{field.name}}">{{field.label}}: </label>
+            <input id="{{field.name}}" 
+            type="{{field.type}}" 
+            formControlName="{{field.name}}" 
+            [readonly]="(field.name === 'subject')?isReadOnly:false">
+        </div>
+        <div *ngIf="field.name === 'message'">
+            <label for="{{field.name}}">{{field.label}}: </label>
+            <textarea formControlName="{{field.name}}" id="" cols="30" rows="10" id="{{field.name}}" ></textarea>
+        </div>
+    </ng-container>
+
+
+    <button type="submit">Envoyer</button>
+
+</form>
