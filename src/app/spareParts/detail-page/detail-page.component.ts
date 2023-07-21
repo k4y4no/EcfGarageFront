@@ -4,12 +4,16 @@ import { Observable, map } from 'rxjs';
 import { Car } from 'src/app/models/Car';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ApiService } from 'src/app/_services/api.service';
+import { FormComponent } from '../form/form.component';
 
 
 @Component({
   selector: 'ecf-detail-page',
   standalone: true,
-  imports: [CommonModule],
+  imports: [
+    CommonModule,
+    FormComponent
+  ],
   templateUrl: './detail-page.component.html',
   styleUrls: ['./detail-page.component.scss']
 })

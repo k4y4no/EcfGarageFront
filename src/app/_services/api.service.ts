@@ -17,7 +17,7 @@ export class ApiService {
 
   getList(url: string): Observable<[]> {
 
-    return this.http.get<[]>(`${this.urlLocal}${url}` , {
+    return this.http.get<[]>(`${this.urlProd}${url}` , {
       headers: new HttpHeaders({
         'Accept':  'application/ld+json'
       })
@@ -25,7 +25,7 @@ export class ApiService {
   }
 
   getById(url: string, id: string):  Observable<any> {
-    return this.http.get<[]>(`${this.urlLocal}${url}/${id}`, {
+    return this.http.get<[]>(`${this.urlProd}${url}/${id}`, {
       headers: new HttpHeaders({
         'Accept':  'application/ld+json'
       })

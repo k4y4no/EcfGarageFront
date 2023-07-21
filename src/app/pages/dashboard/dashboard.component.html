@@ -6,16 +6,16 @@
         <li><a (click)="getThisPanel('comments')">Comments</a></li>      </ul>
     </nav>
 <ng-container *ngIf="(panelRequested$ | async) as panelRequested">
-  <app-list-items [panelRequested]="panelRequested"></app-list-items>
+  <ecf-list-items [panelRequested]="panelRequested"></ecf-list-items>
 </ng-container>
 </div>
 <ng-container *ngIf="(panelRequested$ | async) as panelRequested">
 
   <ng-container [ngSwitch]="panelRequested">
 
-    <app-form *ngSwitchCase="'users'" [formTemplate]="'users'"></app-form>
+    <ecf-form *ngSwitchCase="'users'" [formTemplate]="'users'"></ecf-form>
     
-    <app-form *ngSwitchCase="'cars'" [formTemplate]="'cars'"></app-form>
+    <ecf-form *ngSwitchCase="'cars'" [formTemplate]="'cars'"></ecf-form>
 
   </ng-container> 
 

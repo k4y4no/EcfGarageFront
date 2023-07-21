@@ -1,5 +1,5 @@
 
-<form [formGroup]="contactForm" (submit)="onSubmit()">
+<form [formGroup]="contactForm">
     <h2 *ngIf="url === '/contact'">Contactez nous!</h2>
     <ng-container *ngFor="let field of fieldForm">
         <div *ngIf="field.name !== 'message'">
