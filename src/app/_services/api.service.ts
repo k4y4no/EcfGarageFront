@@ -25,7 +25,7 @@ export class ApiService {
   }
 
   getById(url: string, id: string):  Observable<any> {
-    return this.http.get<[]>(`https://garagerestapi-a1ad312e44d1.herokuapp.com/api/${url}/${id}`, {
+    return this.http.get<[]>(`${this.urlLocal}${url}/${id}`, {
       headers: new HttpHeaders({
         'Accept':  'application/ld+json'
       })
